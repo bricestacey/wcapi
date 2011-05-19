@@ -3,18 +3,19 @@ require 'net/http'
 require 'cgi'
 
 ['response_parser', 
-  'rexml_parser', 
-  'hpricot_parser', 
-  'client', 
-  'open_search_response', 
-  'get_record_response', 
-  'get_location_response', 
-  'sru_search_response', 
-  'record', 
-  'record/isbn',
-  'record/leader',
-  'holding'].each do |file|
-  require File.join(File.dirname(__FILE__), 'wcapi', file)
+ 'rexml_parser', 
+ 'hpricot_parser', 
+ 'client', 
+ 'open_search_response', 
+ 'get_record_response', 
+ 'get_location_response', 
+ 'sru_search_response', 
+ 'record', 
+ 'record/isbn',
+ 'record/leader',
+ 'holding',
+ 'version'].each do |file|
+ require File.join(File.dirname(__FILE__), 'wcapi', file)
 end
 
 
