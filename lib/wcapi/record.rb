@@ -51,6 +51,12 @@ module WCAPI
       end
     end
 
+    # TODO: CONFIRM ACCURACY OF THIS
+    def call_number
+      @call_number ||= xpath_all(@doc, "datafield[@tag='050']/subfield").collect {|subfield|
+        xpath_get_text(subfield)
+      }.join(' ')
+    end
     def link
       "http://www.worldcat.org/oclc/#{self.oclc_id}"
     end
