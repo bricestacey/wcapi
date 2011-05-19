@@ -57,6 +57,14 @@ module WCAPI
         xpath_get_text(subfield)
       }.join(' ')
     end
+
+    # TODO: CONFIRM ACCURACY OF THIS
+    def series
+      @series ||= xpath_all(@doc, "datafield[@tag='490']/subfield").collect {|subfield|
+        xpath_get_text(subfield)
+      }.join(' ')
+    end
+
     def link
       "http://www.worldcat.org/oclc/#{self.oclc_id}"
     end
