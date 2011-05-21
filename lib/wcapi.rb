@@ -4,7 +4,6 @@ require 'cgi'
 
 ['response_parser', 
  'rexml_parser', 
- 'hpricot_parser', 
  'client', 
  'open_search_response', 
  'get_record_response', 
