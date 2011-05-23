@@ -12,8 +12,7 @@ require 'cgi'
  'record', 
  'record/isbn',
  'record/leader',
- 'holding',
- 'version'].each do |file|
+ 'holding'].each do |file|
  require File.join(File.dirname(__FILE__), 'wcapi', file)
 end
 
